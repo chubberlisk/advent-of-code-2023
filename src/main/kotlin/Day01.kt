@@ -12,6 +12,9 @@ class Day01 {
 }
 
 fun main() {
-    val testInput = readInput("Day01")
-    println("Sum of calibration values: ${Day01.part1(testInput)}")
+    val testInput = readInput("Day01_test")
+    println("[Test Input] Sum of calibration values: ${Day01.part1(testInput)}")
+
+    val puzzleInput = readInput("Day01")
+    println("[Puzzle Input] Sum of calibration values: ${Day01.part1(puzzleInput)}")
 }
