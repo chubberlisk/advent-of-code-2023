@@ -27,20 +27,20 @@ class Day01Test : DescribeSpec({
             sumOfCalibrationValues.shouldBe(13)
         }
 
-        it("returns the sum of multiple arty calibration values") {
-            val artyCalibrationValues = listOf("1abc2", "pqr3stu8vwx", "a1b2c3d4e5f")
-
-            val sumOfCalibrationValues = Day01.part1(artyCalibrationValues)
-
-            sumOfCalibrationValues.shouldBe(65)
-        }
-
         it("returns a single digit calibration value as a two-digit number") {
             val artyCalibrationValues = listOf("treb7uchet")
 
             val sumOfCalibrationValues = Day01.part1(artyCalibrationValues)
 
             sumOfCalibrationValues.shouldBe(77)
+        }
+
+        it("returns the sum of multiple arty calibration values") {
+            val artyCalibrationValues = listOf("1abc2", "pqr3stu8vwx", "a1b2c3d4e5f")
+
+            val sumOfCalibrationValues = Day01.part1(artyCalibrationValues)
+
+            sumOfCalibrationValues.shouldBe(65)
         }
     }
 })
