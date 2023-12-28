@@ -11,7 +11,7 @@ class Day01Test : DescribeSpec({
             sumOfCalibrationValues.shouldBe(12)
         }
 
-        it("returns the first and last digit combined") {
+        it("uses only the first and last digit combined for a calibration value") {
             val artyCalibrationValues = listOf("123")
 
             val sumOfCalibrationValues = Day01.part1(artyCalibrationValues)
@@ -19,7 +19,7 @@ class Day01Test : DescribeSpec({
             sumOfCalibrationValues.shouldBe(13)
         }
 
-        it("ignores letters") {
+        it("ignores letters for a calibration value") {
             val artyCalibrationValues = listOf("a1abc2xyz3a")
 
             val sumOfCalibrationValues = Day01.part1(artyCalibrationValues)
@@ -27,7 +27,7 @@ class Day01Test : DescribeSpec({
             sumOfCalibrationValues.shouldBe(13)
         }
 
-        it("returns a single digit calibration value as a two-digit number") {
+        it("uses the single digit for the first and last digit of a calibration value") {
             val artyCalibrationValues = listOf("treb7uchet")
 
             val sumOfCalibrationValues = Day01.part1(artyCalibrationValues)
