@@ -4,7 +4,7 @@ import io.kotest.matchers.shouldBe
 class Day01Test : DescribeSpec({
     describe("Part 1: Calculate sum of calibration values") {
         // calibration values are formed by combining the first and last digits of arty calibration values
-        it("returns the sum of calibration values") {
+        it("deciphers calibration values") {
             val artyCalibrationValues = listOf("12")
 
             val sumOfCalibrationValues = Day01.part1(artyCalibrationValues)
@@ -46,6 +46,12 @@ class Day01Test : DescribeSpec({
     }
 
     describe("Part 2: ...where some of the digits are spelled out with letters") {
+        it("deciphers calibration values") {
+            val artyCalibrationValues = listOf("12")
 
+            val sumOfCalibrationValues = Day01.part2(artyCalibrationValues)
+
+            sumOfCalibrationValues.shouldBe(12)
+        }
     }
 })

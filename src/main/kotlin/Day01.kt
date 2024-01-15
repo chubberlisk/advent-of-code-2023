@@ -8,6 +8,12 @@ class Day01 {
 
             "${firstDigit}${lastDigit}".toInt()
         }
+
+        fun part2(artyCalVals: List<String>): Int {
+            val listOfInts = artyCalVals.map { it.toInt() }
+
+            return listOfInts.first()
+        }
     }
 }
 
