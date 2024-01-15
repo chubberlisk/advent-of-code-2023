@@ -53,5 +53,13 @@ class Day01Test : DescribeSpec({
 
             sumOfCalibrationValues.shouldBe(12)
         }
+
+        it("uses only the first and last digit combined for a calibration value") {
+            val artyCalibrationValues = listOf("123")
+
+            val sumOfCalibrationValues = Day01.part2(artyCalibrationValues)
+
+            sumOfCalibrationValues.shouldBe(13)
+        }
     }
 })

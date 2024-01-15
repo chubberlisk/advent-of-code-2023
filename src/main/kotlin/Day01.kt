@@ -10,7 +10,14 @@ class Day01 {
         }
 
         fun part2(artyCalVals: List<String>): Int {
-            val listOfInts = artyCalVals.map { it.toInt() }
+            val listOfInts = mutableListOf<Int>()
+
+            for (artyCalVal in artyCalVals) {
+                val firstNumber = artyCalVal.first()
+                val lastNumber = artyCalVal.last()
+
+                listOfInts.add("${firstNumber}${lastNumber}".toInt())
+            }
 
             return listOfInts.first()
         }
