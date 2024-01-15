@@ -10,11 +10,34 @@ class Day01 {
         }
 
         fun part2(artyCalVals: List<String>): Int {
+            val numbersToFind = Regex("(one|two|three|four|five|six|seven|eight|nine|[1-9])")
+
+            val textToNumber = mapOf(
+                "one" to "1",
+                "two" to "2",
+                "three" to "3",
+                "four" to "4",
+                "five" to "5",
+                "six" to "6",
+                "seven" to "7",
+                "eight" to "8",
+                "nine" to "9"
+            )
+
             val listOfInts = mutableListOf<Int>()
 
             for (artyCalVal in artyCalVals) {
-                val firstNumber = artyCalVal.first()
-                val lastNumber = artyCalVal.last()
+
+                var firstNumber = numbersToFind.findAll(artyCalVal).first().groups.first()?.value
+                var lastNumber = numbersToFind.findAll(artyCalVal).last().groups.first()?.value
+
+                if(textToNumber.keys.contains(firstNumber)) {
+                    firstNumber = textToNumber[firstNumber]
+                }
+
+                if(textToNumber.keys.contains(lastNumber)) {
+                    lastNumber = textToNumber[lastNumber]
+                }
 
                 listOfInts.add("${firstNumber}${lastNumber}".toInt())
             }

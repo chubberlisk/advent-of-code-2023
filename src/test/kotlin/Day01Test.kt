@@ -69,5 +69,13 @@ class Day01Test : DescribeSpec({
 
             sumOfCalibrationValues.shouldBe(77)
         }
+
+        it("identifies numbers spelled out with letters") {
+            val artyCalibrationValues = listOf("onetwo")
+
+            val sumOfCalibrationValues = Day01.part2(artyCalibrationValues)
+
+            sumOfCalibrationValues.shouldBe(12)
+        }
     }
 })
