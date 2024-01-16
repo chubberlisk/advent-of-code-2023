@@ -28,8 +28,8 @@ class Day01 {
 
             for (artyCalVal in artyCalVals) {
 
-                var firstNumber = numbersToFind.findAll(artyCalVal).first().groups.last()?.value
-                var lastNumber = numbersToFind.findAll(artyCalVal).last().groups.last()?.value
+                var firstNumber = numbersToFind.findAll(artyCalVal).first().destructured.toList().firstOrNull()
+                var lastNumber = numbersToFind.findAll(artyCalVal).last().destructured.toList().firstOrNull()
 
                 if(textToNumber.keys.contains(firstNumber)) {
                     firstNumber = textToNumber[firstNumber]
