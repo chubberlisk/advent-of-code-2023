@@ -77,5 +77,13 @@ class Day01Test : DescribeSpec({
 
             sumOfCalibrationValues.shouldBe(12)
         }
+
+        it("returns the sum of multiple arty calibration values") {
+            val artyCalibrationValues = listOf("12", "34")
+
+            val sumOfCalibrationValues = Day01.part2(artyCalibrationValues)
+
+            sumOfCalibrationValues.shouldBe(46)
+        }
     }
 })

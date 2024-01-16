@@ -42,7 +42,7 @@ class Day01 {
                 listOfInts.add("${firstNumber}${lastNumber}".toInt())
             }
 
-            return listOfInts.first()
+            return listOfInts.sum()
         }
     }
 }
