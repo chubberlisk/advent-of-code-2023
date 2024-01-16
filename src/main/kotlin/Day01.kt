@@ -10,7 +10,7 @@ class Day01 {
         }
 
         fun part2(artyCalVals: List<String>): Int {
-            val numbersToFind = Regex("(one|two|three|four|five|six|seven|eight|nine|[1-9])")
+            val numbersToFind = Regex("(?=(one|two|three|four|five|six|seven|eight|nine|[1-9]))")
 
             val textToNumber = mapOf(
                 "one" to "1",
@@ -28,8 +28,8 @@ class Day01 {
 
             for (artyCalVal in artyCalVals) {
 
-                var firstNumber = numbersToFind.findAll(artyCalVal).first().groups.first()?.value
-                var lastNumber = numbersToFind.findAll(artyCalVal).last().groups.first()?.value
+                var firstNumber = numbersToFind.findAll(artyCalVal).first().groups.last()?.value
+                var lastNumber = numbersToFind.findAll(artyCalVal).last().groups.last()?.value
 
                 if(textToNumber.keys.contains(firstNumber)) {
                     firstNumber = textToNumber[firstNumber]
@@ -48,9 +48,15 @@ class Day01 {
 }
 
 fun main() {
-    val testInput = readInput("Day01_test")
-    println("[Test Input] Sum of calibration values: ${Day01.part1(testInput)}")
+    val partOneTestInput = readInput("Day01_test")
+    println("[Test Input] Sum of calibration values: ${Day01.part1(partOneTestInput)}")
 
-    val puzzleInput = readInput("Day01")
-    println("[Puzzle Input] Sum of calibration values: ${Day01.part1(puzzleInput)}")
+    val partOnePuzzleInput = readInput("Day01")
+    println("[Puzzle Input] Sum of calibration values: ${Day01.part1(partOnePuzzleInput)}")
+
+    val partTwoTestInput = readInput("Day01_Part2_test")
+    println("[Test Input] Sum of calibration values: ${Day01.part2(partTwoTestInput)}")
+
+    val partTwoPuzzleInput = readInput("Day01")
+    println("[Puzzle Input] Sum of calibration values: ${Day01.part2(partTwoPuzzleInput)}")
 }
