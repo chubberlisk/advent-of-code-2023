@@ -24,9 +24,7 @@ class Day01 {
                 "nine" to "9"
             )
 
-            val listOfInts = mutableListOf<Int>()
-
-            for (artyCalVal in artyCalVals) {
+            return artyCalVals.sumOf { artyCalVal ->
 
                 var firstNumber = numbersToFind.findAll(artyCalVal).first().destructured.toList().firstOrNull()
                 var lastNumber = numbersToFind.findAll(artyCalVal).last().destructured.toList().firstOrNull()
@@ -39,10 +37,8 @@ class Day01 {
                     lastNumber = textToNumber[lastNumber]
                 }
 
-                listOfInts.add("${firstNumber}${lastNumber}".toInt())
+                "${firstNumber}${lastNumber}".toInt()
             }
-
-            return listOfInts.sum()
         }
     }
 }
