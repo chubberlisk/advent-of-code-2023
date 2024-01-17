@@ -1,3 +1,7 @@
+package Day01
+
+import readInput
+
 class Day01 {
     companion object {
         fun part1(artyCalVals: List<String>): Int = artyCalVals.sumOf { artyCalVal ->

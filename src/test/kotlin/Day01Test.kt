@@ -1,3 +1,4 @@
+import Day01.Day01
 import io.kotest.core.spec.style.DescribeSpec
 import io.kotest.matchers.shouldBe
 
