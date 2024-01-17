@@ -25,9 +25,10 @@ class Day01 {
             )
 
             return artyCalVals.sumOf { artyCalVal ->
+                val numbers = numbersToFind.split(artyCalVal).filter { it.isNotBlank() }
 
-                var firstNumber = numbersToFind.findAll(artyCalVal).first().destructured.toList().firstOrNull()
-                var lastNumber = numbersToFind.findAll(artyCalVal).last().destructured.toList().firstOrNull()
+                var firstNumber = numbers.firstOrNull()
+                var lastNumber = numbers.lastOrNull()
 
                 if(textToNumber.keys.contains(firstNumber)) {
                     firstNumber = textToNumber[firstNumber]
