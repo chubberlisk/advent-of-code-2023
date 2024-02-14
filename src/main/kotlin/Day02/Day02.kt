@@ -7,11 +7,9 @@ class Day02 {
                 val cubes = game.split(": ").last()
                 val cubeSubsets = cubes.split("; ") // ["15 blue", "14 yellow"]
 
-                val cubeMap = mutableMapOf<String, Int>()
-                for(cubeSubset in cubeSubsets) {
-                    val cubeSubsetInfo = cubeSubset.split(" ")
-                    cubeMap[cubeSubsetInfo.last()] = cubeSubsetInfo.first().toInt()
-                }
+                val cubeMap = cubeSubsets.map {
+                    it.split(" ").last() to it.split(" ").first().toInt()
+                }.toMap()
 
                 val totalCubes = cubeMap.values.sum()
 
