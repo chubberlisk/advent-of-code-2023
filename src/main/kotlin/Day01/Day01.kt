@@ -51,18 +51,18 @@ class Day01 {
 fun main() {
     println("Part 1")
     println("======")
-    val partOneTestInput = readInput("Day01_test")
+    val partOneTestInput = readInput("Day01/Day01_test")
     println("[Test Input] Sum of calibration values: ${Day01.part1(partOneTestInput)}")
 
-    val partOnePuzzleInput = readInput("Day01")
+    val partOnePuzzleInput = readInput("Day01/Day01")
     println("[Puzzle Input] Sum of calibration values: ${Day01.part1(partOnePuzzleInput)}")
 
     println()
     println("Part 2")
     println("======")
-    val partTwoTestInput = readInput("Day01_Part2_test")
+    val partTwoTestInput = readInput("Day01/Day01_Part2_test")
     println("[Test Input] Sum of calibration values: ${Day01.part2(partTwoTestInput)}")
 
-    val partTwoPuzzleInput = readInput("Day01")
+    val partTwoPuzzleInput = readInput("Day01/Day01")
     println("[Puzzle Input] Sum of calibration values: ${Day01.part2(partTwoPuzzleInput)}")
 }

@@ -1,5 +1,8 @@
 package Day02
 
+import Day01.Day01
+import readInput
+
 class Day02 {
     companion object {
         fun part1(gameRecord: List<String>): Int {
@@ -29,4 +32,11 @@ class Day02 {
             }
         }
     }
+}
+
+fun main() {
+    println("Part 1")
+    println("======")
+    val partOneTestInput = readInput("Day02/Day02_test")
+    println("[Test Input] Sum of possible games: ${Day02.part1(partOneTestInput)}")
 }
