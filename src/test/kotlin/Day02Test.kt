@@ -38,5 +38,13 @@ class Day02Test: DescribeSpec({
 
             sumOfGameRecord.shouldBe(2)
         }
+
+        it("recognises that a game with greater than 13 green cubes is impossible") {
+            val gameRecord = listOf("Game 1: 0 blue; 0 red; 14 green", "Game 2: 14 blue; 12 red; 13 green")
+
+            val sumOfGameRecord = Day02.part1(gameRecord)
+
+            sumOfGameRecord.shouldBe(2)
+        }
     }
 })

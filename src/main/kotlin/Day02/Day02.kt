@@ -23,6 +23,8 @@ class Day02 {
                     0
                 } else if (cubeMap["red"] != null && cubeMap.getValue("red") > maxCubesForEachColour.getValue("red")) {
                     0
+                } else if (cubeMap["green"] != null && cubeMap.getValue("green") > maxCubesForEachColour.getValue("green")) {
+                    0
                 } else if (totalCubes > maxCubesForEachColour.values.sum()) {
                     0
                 } else {
