@@ -8,7 +8,10 @@ class Day02Test: DescribeSpec({
 
     describe("Part 1: Calculate the sum of the IDs of possible games") {
         it("returns the sum of game IDs") {
-            val gameRecord = listOf("Game 1: 14 blue; 12 red; 13 green", "Game 2: 14 blue; 12 red; 13 green")
+            val gameRecord = listOf(
+                "Game 1: 14 blue; 12 red; 13 green",
+                "Game 2: 14 blue; 12 red; 13 green"
+            )
 
             val sumOfGameRecord = Day02.part1(gameRecord)
 
@@ -16,7 +19,10 @@ class Day02Test: DescribeSpec({
         }
 
         it("recognises that a game with greater than 38 total cubes is impossible") {
-            val gameRecord = listOf("Game 1: 15 blue; 12 red; 13 green", "Game 2: 14 blue; 12 red; 13 green")
+            val gameRecord = listOf(
+                "Game 1: 15 blue; 12 red; 13 green",
+                "Game 2: 14 blue; 12 red; 13 green"
+            )
 
             val sumOfGameRecord = Day02.part1(gameRecord)
 
@@ -24,7 +30,10 @@ class Day02Test: DescribeSpec({
         }
 
         it("recognises that a game with greater than 14 blue cubes is impossible") {
-            val gameRecord = listOf("Game 1: 15 blue; 0 red; 0 green", "Game 2: 14 blue; 12 red; 13 green")
+            val gameRecord = listOf(
+                "Game 1: 15 blue; 0 red; 0 green",
+                "Game 2: 14 blue; 12 red; 13 green"
+            )
 
             val sumOfGameRecord = Day02.part1(gameRecord)
 
@@ -32,7 +41,10 @@ class Day02Test: DescribeSpec({
         }
 
         it("recognises that a game with greater than 12 red cubes is impossible") {
-            val gameRecord = listOf("Game 1: 0 blue; 13 red; 0 green", "Game 2: 14 blue; 12 red; 13 green")
+            val gameRecord = listOf(
+                "Game 1: 0 blue; 13 red; 0 green",
+                "Game 2: 14 blue; 12 red; 13 green"
+            )
 
             val sumOfGameRecord = Day02.part1(gameRecord)
 
@@ -40,7 +52,10 @@ class Day02Test: DescribeSpec({
         }
 
         it("recognises that a game with greater than 13 green cubes is impossible") {
-            val gameRecord = listOf("Game 1: 0 blue; 0 red; 14 green", "Game 2: 14 blue; 12 red; 13 green")
+            val gameRecord = listOf(
+                "Game 1: 0 blue; 0 red; 14 green",
+                "Game 2: 14 blue; 12 red; 13 green"
+            )
 
             val sumOfGameRecord = Day02.part1(gameRecord)
 
